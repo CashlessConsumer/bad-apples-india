@@ -176,7 +176,7 @@ footer a:hover{color:#999}
   <div class="subtitle">A public, verifiable archive of police misconduct in India</div>
   <nav>
     <a href="/">Archive</a>
-    <a href="/constitution">Constitution</a>
+    <a href="constitution.html">Constitution</a>
     <a href="https://github.com/CashlessConsumer/bad-apples-india" target="_blank" rel="noopener">Source</a>
     <a href="#submit" onclick="alert('Submit via GitHub: fork the repo, add an incident JSON to data/incidents/, and open a PR. Details in README.')">Submit Evidence</a>
   </nav>
@@ -240,11 +240,18 @@ footer a:hover{color:#999}
 </div><!-- /container -->
 
 <script>
-// ═══ DATA (loaded from JSON at build time) ═══
-// In development, data is embedded below.
-// In production, the build script replaces this with the full dataset.
-const INCIDENTS = [];
+// ═══ DATA (fetched from feed.json) ═══
+let INCIDENTS = [];
 
+async function loadData() {
+  try {
+    const res = await fetch('data/feed.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    INCIDENTS = await res.json();
+  } catch(e) {
+    console.warn('Failed to load feed: ' + e.message);
+  }
+}
 // ── helpers ──
 const STATUS_LABELS = {
   none:'No legal action', complaint_filed:'Complaint filed',
@@ -413,7 +420,7 @@ function closeModal(){
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal() });
 
 // ═══ INIT ═══
-render();
+loadData().then(render);
 </script>
 </body>
 </html>
