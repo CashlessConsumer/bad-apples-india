@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bad Apples India — Police Accountability Archive</title>
+<meta name="description" content="A public, verifiable archive of police misconduct in India. Evidence-based records with video, documents, and officer identification.">
+<meta property="og:title" content="Bad Apples India">
+<meta property="og:description" content="Public archive of police accountability records for India.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍎</text></svg>">
+<style>
+/* ── reset ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;
+  background:#0b0b0f;color:#e4e0d8;line-height:1.6;min-height:100vh}
+
+/* ── layout ── */
+.container{max-width:1200px;margin:0 auto;padding:1.5rem}
+header{border-bottom:1px solid #222;padding-bottom:1rem;margin-bottom:1.5rem}
+
+header h1{font-size:1.8rem;font-weight:700;letter-spacing:-0.02em;
+  background:linear-gradient(135deg,#ff6b35,#ff2d55);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;display:inline-block}
+header .subtitle{color:#888;font-size:0.9rem;margin-top:0.25rem}
+header .badge{display:inline-block;font-size:0.7rem;padding:0.15rem 0.6rem;
+  border-radius:999px;background:#1a1a2e;color:#aaa;margin-left:0.75rem;
+  vertical-align:middle;border:1px solid #333}
+nav{display:flex;gap:1.5rem;margin-top:1rem;flex-wrap:wrap}
+nav a{color:#999;text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+nav a:hover{color:#ff6b35}
+
+/* ── stats bar ── */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:1rem;margin-bottom:2rem}
+.stat-card{background:#13131a;border:1px solid #222;border-radius:8px;
+  padding:1rem;text-align:center}
+.stat-card .num{font-size:1.8rem;font-weight:700;color:#ff6b35;display:block}
+.stat-card .label{font-size:0.75rem;color:#777;text-transform:uppercase;
+  letter-spacing:0.05em;margin-top:0.25rem}
+
+/* ── filters ── */
+.filters{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.filters input,.filters select{background:#13131a;border:1px solid #333;
+  border-radius:6px;padding:0.6rem 0.9rem;color:#e4e0d8;font-size:0.85rem;
+  transition:border-color 0.2s}
+.filters input::placeholder{color:#555}
+.filters input:focus,.filters select:focus{outline:none;border-color:#ff6b35}
+.filters input{flex:1;min-width:200px}
+.filters select{min-width:140px}
+
+/* ── incident list ── */
+.incident{border:1px solid #222;border-radius:8px;padding:1.25rem;
+  margin-bottom:1rem;background:#13131a;transition:border-color 0.2s}
+.incident:hover{border-color:#333}
+.incident-header{display:flex;justify-content:space-between;align-items:flex-start;
+  flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem}
+.incident-date{color:#888;font-size:0.8rem;white-space:nowrap}
+.incident-id{color:#555;font-size:0.7rem;font-family:monospace}
+
+.incident h3{font-size:1.1rem;margin-bottom:0.3rem;color:#e4e0d8}
+.incident .location{color:#aaa;font-size:0.85rem;margin-bottom:0.5rem}
+.incident .location svg{display:inline;vertical-align:text-bottom;width:14px;height:14px}
+
+.officers{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.75rem}
+.officer-tag{background:#1f1f2e;border:1px solid #333;border-radius:4px;
+  padding:0.25rem 0.6rem;font-size:0.8rem;color:#e4e0d8;
+  display:inline-flex;align-items:center;gap:0.3rem}
+.officer-tag .rank{color:#777;font-size:0.7rem}
+.officer-tag .badge-id{color:#ff6b35;font-size:0.65rem;font-family:monospace}
+
+.narrative{color:#bbb;font-size:0.85rem;line-height:1.55;margin-bottom:0.75rem}
+
+.evidence-bar{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.5rem}
+.evidence-badge{font-size:0.7rem;padding:0.15rem 0.5rem;border-radius:4px;
+  border:1px solid #333;background:#1a1a2e;color:#aaa}
+.evidence-badge.has-video{border-color:#3a3a5e;color:#8af}
+.evidence-badge.has-medical{border-color:#3a5a3a;color:#8c8}
+.evidence-badge.tier-2{border-color:#5a4a2a;color:#fc3}
+.evidence-badge.tier-1{border-color:#5a3a3a;color:#f66}
+
+.status-tag{font-size:0.75rem;padding:0.2rem 0.6rem;border-radius:4px;
+  display:inline-block;font-weight:500}
+.status-none{background:#222;color:#777}
+.status-complaint_filed{background:#2a2a1a;color:#fc3}
+.status-fir_registered{background:#1a2a2a;color:#6cf}
+.status-investigation_ongoing{background:#1a2a1a;color:#6c6}
+.status-chargesheet_filed{background:#1a1a2a;color:#99f}
+.status-trial_ongoing{background:#1a2a2a;color:#6cf}
+.status-convicted{background:#2a1a1a;color:#f66}
+.status-acquitted{background:#2a2a2a;color:#999}
+.status-departmental_action{background:#2a2a1a;color:#fc3}
+.status-closed{background:#222;color:#666}
+
+.video-thumbnails{display:flex;gap:0.5rem;margin-top:0.75rem;flex-wrap:wrap}
+.video-thumb{cursor:pointer;border-radius:6px;overflow:hidden;border:1px solid #333;
+  width:200px;transition:border-color 0.2s;position:relative}
+.video-thumb:hover{border-color:#ff6b35}
+.video-thumb img{width:100%;height:112px;object-fit:cover;display:block;
+  background:#1a1a2e}
+.video-thumb .play-overlay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:40px;height:40px;background:rgba(0,0,0,0.7);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  border:2px solid rgba(255,255,255,0.3);transition:background 0.2s}
+.video-thumb:hover .play-overlay{background:rgba(255,100,0,0.8)}
+.video-thumb .play-overlay::after{content:'▶';color:#fff;font-size:0.9rem}
+.video-thumb .video-source{font-size:0.65rem;color:#777;padding:0.3rem 0.5rem;
+  background:#0b0b0f}
+
+/* ── sources ── */
+.sources{font-size:0.8rem;color:#666;margin-top:0.5rem}
+.sources a{color:#6af;text-decoration:none}
+.sources a:hover{text-decoration:underline}
+
+/* ── modal ── */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);
+  z-index:100;align-items:center;justify-content:center;padding:1rem}
+.modal-overlay.active{display:flex}
+.modal-content{background:#13131a;border:1px solid #333;border-radius:12px;
+  max-width:800px;width:100%;max-height:90vh;overflow-y:auto;padding:1.5rem}
+.modal-content iframe{width:100%;aspect-ratio:16/9;border-radius:8px;border:none}
+.modal-close{float:right;background:none;border:none;color:#888;font-size:1.3rem;
+  cursor:pointer;padding:0.25rem;line-height:1}
+.modal-close:hover{color:#fff}
+.modal-info{margin-top:1rem}
+.modal-info h4{color:#ff6b35;font-size:0.9rem;margin-bottom:0.3rem}
+.modal-info p{color:#bbb;font-size:0.85rem}
+
+/* ── empty state ── */
+.empty-state{text-align:center;padding:4rem 1rem;color:#555}
+.empty-state .icon{font-size:3rem;margin-bottom:1rem;opacity:0.4}
+.empty-state h3{color:#777;margin-bottom:0.5rem}
+
+/* ── constitution page ── */
+.constitution{max-width:720px;margin:0 auto;padding:2rem 0}
+.constitution h1{font-size:2rem;margin-bottom:0.5rem}
+.constitution h2{font-size:1.3rem;margin:2rem 0 0.75rem;color:#ff6b35}
+.constitution h3{font-size:1rem;margin:1.5rem 0 0.5rem}
+.constitution p,.constitution li{color:#bbb;font-size:0.9rem;line-height:1.7}
+.constitution ul,.constitution ol{padding-left:1.5rem;margin:0.5rem 0}
+.constitution li{margin-bottom:0.3rem}
+.constitution blockquote{border-left:3px solid #ff6b35;padding:0.5rem 1rem;
+  margin:1rem 0;background:#13131a;border-radius:0 6px 6px 0;color:#aaa;
+  font-style:italic}
+.constitution table{width:100%;border-collapse:collapse;margin:1rem 0;
+  font-size:0.85rem}
+.constitution table th,.constitution table td{border:1px solid #333;
+  padding:0.5rem 0.75rem;text-align:left}
+.constitution table th{background:#1a1a2e;color:#aaa;font-weight:600}
+.constitution table td{color:#bbb}
+.constitution hr{border:none;border-top:1px solid #222;margin:2rem 0}
+
+/* ── footer ── */
+footer{text-align:center;padding:2rem 0;color:#444;font-size:0.8rem;border-top:1px solid #222;margin-top:3rem}
+footer a{color:#666;text-decoration:none}
+footer a:hover{color:#999}
+
+/* ── responsive ── */
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .filters input{min-width:100%}
+  .filters select{min-width:100%}
+  .video-thumb{width:100%}
+  .video-thumb img{height:auto;aspect-ratio:16/9}
+  .incident-header{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ═══ HEADER ═══ -->
+<header>
+  <h1>Bad Apples India <span class="badge">alpha</span></h1>
+  <div class="subtitle">A public, verifiable archive of police misconduct in India</div>
+  <nav>
+    <a href="/">Archive</a>
+    <a href="/constitution">Constitution</a>
+    <a href="https://github.com/CashlessConsumer/bad-apples-india" target="_blank" rel="noopener">Source</a>
+    <a href="#submit" onclick="alert('Submit via GitHub: fork the repo, add an incident JSON to data/incidents/, and open a PR. Details in README.')">Submit Evidence</a>
+  </nav>
+</header>
+
+<!-- ═══ APP ROOT ═══ -->
+<div id="app">
+
+<!-- stats -->
+<div class="stats" id="stats"></div>
+
+<!-- filters -->
+<div class="filters">
+  <input type="text" id="filterSearch" placeholder="Search by officer name, station, location…" oninput="render()">
+  <select id="filterStatus" onchange="render()">
+    <option value="">All statuses</option>
+    <option value="none">No legal action</option>
+    <option value="complaint_filed">Complaint filed</option>
+    <option value="fir_registered">FIR registered</option>
+    <option value="investigation_ongoing">Investigation ongoing</option>
+    <option value="chargesheet_filed">Chargesheet filed</option>
+    <option value="trial_ongoing">Trial ongoing</option>
+    <option value="convicted">Convicted</option>
+    <option value="acquitted">Acquitted</option>
+    <option value="departmental_action">Departmental action</option>
+    <option value="closed">Closed</option>
+  </select>
+  <select id="filterTier" onchange="render()">
+    <option value="">All evidence tiers</option>
+    <option value="1">Tier 1 — Court judgment</option>
+    <option value="2">Tier 2 — Verified video / FIR / medical</option>
+    <option value="3">Tier 3 — Single source / news</option>
+  </select>
+  <select id="sortBy" onchange="render()">
+    <option value="date_desc">Newest first</option>
+    <option value="date_asc">Oldest first</option>
+  </select>
+</div>
+
+<!-- incident list -->
+<div id="incidentList"></div>
+
+</div><!-- /app -->
+
+<!-- ═══ MODAL ═══ -->
+<div class="modal-overlay" id="videoModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modalEmbed"></div>
+    <div class="modal-info" id="modalInfo"></div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  Inspired by <a href="https://www.aaronswartzday.org/bad-apple-announcement" target="_blank" rel="noopener">Aaron Swartz's Bad Apples</a>.
+  Built for accountability — not harassment, not violence, not vengeance.<br>
+  <a href="https://github.com/CashlessConsumer/bad-apples-india">GitHub</a>
+</footer>
+
+</div><!-- /container -->
+
+<script>
+// ═══ DATA (loaded from JSON at build time) ═══
+// In development, data is embedded below.
+// In production, the build script replaces this with the full dataset.
+const INCIDENTS = [];
+
+// ── helpers ──
+const STATUS_LABELS = {
+  none:'No legal action', complaint_filed:'Complaint filed',
+  fir_registered:'FIR registered', investigation_ongoing:'Investigation ongoing',
+  chargesheet_filed:'Chargesheet filed', trial_ongoing:'Trial ongoing',
+  convicted:'Convicted', acquitted:'Acquitted',
+  departmental_action:'Departmental action', closed:'Closed'
+};
+
+function statusClass(s){ return 'status-'+s.replace(/[^a-z_]/g,'') }
+
+function evidenceTierLabel(t){
+  const labels={1:'Tier 1 — Judgment / Inquiry',2:'Tier 2 — Verified evidence',3:'Tier 3 — Reported',4:'Tier 4 — Unverified'};
+  return labels[t]||'Unknown'
+}
+
+function dateStr(d){ const dt=new Date(d); return dt.toLocaleDateString('en-IN',{year:'numeric',month:'short',day:'numeric'}) }
+
+function extractVideoId(url){
+  // Twitter/X
+  let m=url.match(/x\.com\/\w+\/status\/(\d+)/)||url.match(/twitter\.com\/\w+\/status\/(\d+)/);
+  if(m) return {type:'twitter',id:m[1],embed:`https://platform.twitter.com/embed/Tweet.html?id=${m[1]}`};
+  // YouTube
+  m=url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/);
+  if(m) return {type:'youtube',id:m[1],embed:`https://www.youtube.com/embed/${m[1]}?rel=0`};
+  // Generic
+  return {type:'link',id:url,embed:url};
+}
+
+// ── render ──
+function render(){
+  const q=document.getElementById('filterSearch').value.toLowerCase();
+  const st=document.getElementById('filterStatus').value;
+  const tier=document.getElementById('filterTier').value;
+  const sort=document.getElementById('sortBy').value;
+
+  let items=INCIDENTS.filter(inc=>{
+    if(st && inc.status!==st) return false;
+    if(tier && String(inc.evidence?.tier||'')!==tier) return false;
+    if(q){
+      const haystack=[
+        inc.narrative||'', inc.location||'', inc.station||'',
+        ...(inc.officers||[]).map(o=>[o.name,o.rank,o.badge,o.station].filter(Boolean).join(' ')),
+        inc.district||''
+      ].join(' ').toLowerCase();
+      if(!haystack.includes(q)) return false;
+    }
+    return true;
+  });
+
+  // Sort
+  items.sort((a,b)=>{
+    const da=new Date(a.date||0).getTime();
+    const db=new Date(b.date||0).getTime();
+    return sort==='date_asc' ? da-db : db-da;
+  });
+
+  // Stats
+  const total=INCIDENTS.length;
+  const withVid=INCIDENTS.filter(i=>i.evidence?.videos?.length>0).length;
+  const namedOff= new Set(INCIDENTS.flatMap(i=>i.officers||[]).map(o=>o.name)).size;
+  const allStations= new Set(INCIDENTS.filter(i=>i.station).map(i=>i.station)).size;
+  document.getElementById('stats').innerHTML=
+    `<div class="stat-card"><span class="num">${total}</span><span class="label">Incidents</span></div>
+     <div class="stat-card"><span class="num">${namedOff}</span><span class="label">Named Officers</span></div>
+     <div class="stat-card"><span class="num">${withVid}</span><span class="label">With Video Evidence</span></div>
+     <div class="stat-card"><span class="num">${allStations}</span><span class="label">Stations</span></div>`;
+
+  // List
+  const list=document.getElementById('incidentList');
+  if(items.length===0){
+    list.innerHTML=`<div class="empty-state"><div class="icon">🍎</div><h3>No incidents found</h3>
+      <p>Try adjusting your filters or contribute evidence.</p></div>`;
+    return;
+  }
+  list.innerHTML=items.map(inc=>{
+    const statusLabel=STATUS_LABELS[inc.status]||inc.status;
+    const tierN=inc.evidence?.tier;
+    const hasVideo=inc.evidence?.videos?.length>0;
+    const hasMedical=!!inc.evidence?.medical_report;
+
+    const officersHtml=(inc.officers||[]).map(o=>
+      `<span class="officer-tag">
+        ${o.name}
+        ${o.rank ? `<span class="rank">(${o.rank})</span>` : ''}
+        ${o.badge ? `<span class="badge-id">#${o.badge}</span>` : ''}
+      </span>`
+    ).join('');
+
+    const evidenceBadges=''+
+      (tierN ? `<span class="evidence-badge tier-${tierN}">${evidenceTierLabel(tierN)}</span>` : '')+
+      (hasVideo ? '<span class="evidence-badge has-video">🎥 Video</span>' : '')+
+      (hasMedical ? '<span class="evidence-badge has-medical">🏥 Medical report</span>' : '');
+
+    const videoHtml=hasVideo ? '<div class="video-thumbnails">'+
+      inc.evidence.videos.map((v,i)=>{
+        const vi=extractVideoId(v.url);
+        const sourceLabel=v.source||'Unknown source';
+        return `<div class="video-thumb" onclick="openVideo(${items.indexOf(inc)},${i})">
+          <div class="play-overlay"></div>
+          <div class="video-source">${sourceLabel}</div>
+        </div>`;
+      }).join('')+'</div>' : '';
+
+    const sourcesHtml=(inc.sources||[]).map(s=>
+      s.url ? `<a href="${s.url}" target="_blank" rel="noopener">${s.description||s.url}</a>` : s.description
+    ).join(' · ');
+
+    const statusClassVal=statusClass(inc.status);
+
+    return `<div class="incident" data-id="${inc.id}">
+      <div class="incident-header">
+        <div>
+          <h3>${inc.location}${inc.station ? ' • '+inc.station : ''}</h3>
+          <div class="location">📍 ${inc.district||inc.location}${inc.jurisdiction ? ' · '+inc.jurisdiction : ''}</div>
+        </div>
+        <div style="text-align:right">
+          <div class="incident-date">${dateStr(inc.date)}</div>
+          <div class="incident-id">${inc.id}</div>
+        </div>
+      </div>
+      <div class="officers">${officersHtml}</div>
+      <div style="margin-bottom:0.5rem">
+        <span class="status-tag ${statusClassVal}">${statusLabel}</span>
+        ${evidenceBadges}
+      </div>
+      <div class="narrative">${inc.narrative}</div>
+      ${videoHtml}
+      ${sourcesHtml ? `<div class="sources">Sources: ${sourcesHtml}</div>` : ''}
+    </div>`;
+  }).join('');
+
+  // Store data for modal
+  window._currentItems=items;
+}
+
+// ── modal ──
+function openVideo(itemIdx, videoIdx){
+  const items=window._currentItems||[];
+  const inc=items[itemIdx];
+  if(!inc) return;
+  const v=inc.evidence?.videos?.[videoIdx];
+  if(!v) return;
+  const vi=extractVideoId(v.url);
+  const modal=document.getElementById('videoModal');
+  document.getElementById('modalEmbed').innerHTML=vi.embed ?
+    `<iframe src="${vi.embed}" allowfullscreen loading="lazy"></iframe>` :
+    `<p style="color:#888">Video URL: <a href="${v.url}" target="_blank" rel="noopener" style="color:#6af">${v.url}</a></p>`;
+  document.getElementById('modalInfo').innerHTML=
+    `<h4>${inc.id} — ${inc.location}</h4>
+     <p>Officer: ${(inc.officers||[]).map(o=>o.name).join(', ')}</p>
+     ${v.capture_time ? `<p>Captured: ${new Date(v.capture_time).toLocaleString('en-IN')}</p>` : ''}
+     ${v.verified_independent ? '<p style="color:#8c8">✓ Verified from independent sources</p>' : ''}
+     <p style="margin-top:0.5rem;font-size:0.8rem;color:#666;word-break:break-all">
+       Source: <a href="${v.url}" target="_blank" rel="noopener" style="color:#6af">${v.url}</a></p>`;
+  modal.classList.add('active');
+  document.body.style.overflow='hidden';
+}
+
+function closeModal(){
+  document.getElementById('videoModal').classList.remove('active');
+  document.getElementById('modalEmbed').innerHTML='';
+  document.body.style.overflow='';
+}
+
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal() });
+
+// ═══ INIT ═══
+render();
+</script>
+</body>
+</html>

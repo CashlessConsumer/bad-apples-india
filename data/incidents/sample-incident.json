@@ -1,0 +1,61 @@
+[
+  {
+    "id": "INC-2026-001",
+    "date": "2026-07-15",
+    "time": "14:30",
+    "location": "Kashmere Gate, Delhi",
+    "jurisdiction": "Delhi Police",
+    "station": "Kashmere Gate PS",
+    "district": "North Delhi",
+    "narrative": "During a peaceful protest outside the Delhi Secretariat, Constable Rajesh Kumar (No. 3421/DAP) was recorded shoving a 65-year-old demonstrator to the ground. The victim sustained a fractured hip. The video shows no provocation or warning before the use of force. A complaint was filed at the same station; no FIR has been registered as of the date of entry.",
+    "status": "complaint_filed",
+    "status_detail": "Complaint filed at Kashmere Gate PS on 2026-07-16. DDR No. 234/2026. No FIR registered within 72 hours as mandated under Section 154 CrPC.",
+    "officers": [
+      {
+        "name": "Rajesh Kumar",
+        "badge": "3421/DAP",
+        "rank": "Constable",
+        "station": "Kashmere Gate PS",
+        "identified_by": ["name", "badge_number"]
+      }
+    ],
+    "victim": {
+      "name": "[redacted for privacy — on record with editors]",
+      "age": 65,
+      "gender": "male"
+    },
+    "evidence": {
+      "tier": 2,
+      "videos": [
+        {
+          "source": "Twitter/X",
+          "url": "https://x.com/username/status/123456789",
+          "embed_url": "https://x.com/username/status/123456789",
+          "capture_time": "2026-07-15T14:31:00",
+          "verified_independent": true
+        }
+      ],
+      "medical_report": true,
+      "fir_copy": false,
+      "other_sources": [
+        "https://example.com/news/kashmere-gate-incident"
+      ]
+    },
+    "sources": [
+      {
+        "type": "video",
+        "url": "https://x.com/username/status/123456789",
+        "description": "Video of the incident recorded by bystander"
+      },
+      {
+        "type": "medical",
+        "url": null,
+        "description": "Hindu Rao Hospital report — fracture of right hip — on file with editors"
+      }
+    ],
+    "submitter": "[journalist name on file with editors]",
+    "submission_date": "2026-07-17",
+    "last_updated": "2026-07-24",
+    "editor_notes": "Video verified against two independent recordings. Medical report confirmed."
+  }
+]

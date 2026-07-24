@@ -1,0 +1,33 @@
+[
+  {
+    "id": "DL-ND-2026-0001",
+    "date": "2026-07-20",
+    "location": "New Delhi",
+    "district": "Central Delhi",
+    "state": "Delhi",
+    "officers": [
+      {
+        "name": "EXAMPLE RECORD — Replace with verified officer name",
+        "badge": "",
+        "rank": "Constable",
+        "station": "Example Police Station"
+      }
+    ],
+    "description": "Template entry. Replace with factual description of the incident — what happened, when, where, and the outcome. Maximum 3-4 sentences. Keep it factual and sourced.",
+    "evidence": [
+      {
+        "type": "video",
+        "url": "https://youtube.com/watch?v=EXAMPLE",
+        "embed_url": "https://www.youtube.com/embed/EXAMPLE",
+        "description": "Video evidence of the incident"
+      }
+    ],
+    "source": "Attribution (news article, FIR, RTI response, etc.)",
+    "source_url": "",
+    "legal_status": "complaint_filed",
+    "category": "excessive_force",
+    "tags": ["template", "replace-me"],
+    "submitted_at": "2026-07-24T00:00:00+05:30",
+    "verified": false
+  }
+]

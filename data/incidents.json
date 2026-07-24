@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "archive": "Bad Apples India — Delhi Police Accountability Archive",
+    "constitution": "https://github.com/CashlessConsumer/bad-apples-india/blob/main/CONSTITUTION.md",
+    "version": "0.1.0",
+    "last_updated": "2026-07-24",
+    "total_incidents": 0,
+    "editorial_contact": "bad-apples@example.org"
+  },
+  "officers": {
+    "index": {},
+    "_description": "Keyed by normalized full name. Value: {name, badge, rank, stations: [], known_in_force: bool, incident_ids: []}"
+  },
+  "stations": {
+    "index": {},
+    "_description": "Keyed by station name. Value: {name, district, zone, coordinates, incident_ids: []}"
+  },
+  "incidents": []
+}
