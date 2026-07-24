@@ -9,13 +9,15 @@ A public, searchable, verifiable archive of police misconduct in India, inspired
 - **GitHub:** https://github.com/CashlessConsumer/bad-apples-india
 - **Live site:** https://cashlessconsumer.github.io/bad-apples-india/
 - **Constitution:** https://cashlessconsumer.github.io/bad-apples-india/constitution.html
+- **Zo Space landing:** https://cashlessconsumer.zo.space/bad-apples
+- **Origin tweet & replies:** https://x.com/logic/status/2080241134174130386
 
 ## Architecture
 
 - **Static site** — single HTML SPA (no framework, no build dependency)
 - **Data** — JSON files in `data/incidents/` (one file per incident, single JSON object)
 - **Build** — `scripts/build.sh` combines + copies to `_site/`
-- **Deploy** — GitHub Pages (main branch, /root) or Vercel (zero config)
+- **Deploy** — GitHub Actions → GitHub Pages (on push to main)
 
 ## How to Add an Incident
 
@@ -53,5 +55,7 @@ A public, searchable, verifiable archive of police misconduct in India, inspired
 - [x] Build script produces `_site/` 
 - [x] Runtime feed fetcher (serves `_site/data/feed.json`)
 - [x] Vercel config
-- [ ] First real incident entry from the momentum-generating tweet
-- [ ] Published link shared in reply to the tweet
+- [x] FOUNDING entry documenting the tweet's context (FOUNDING-2026-07-24.json)
+- [x] Published link shared in reply to the origin tweet (https://x.com/CashlessCnsmr/status/2080592046553755694)
+- [ ] First real incident submission via PR
+- [ ] Onboard community contributors from the tweet thread

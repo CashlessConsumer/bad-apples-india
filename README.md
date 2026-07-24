@@ -1,77 +1,76 @@
 # Bad Apples India 🍎
 
-A public, searchable, verifiable archive of police misconduct in India. Every entry links to evidence — video, documents, official records.
+A public, searchable, verifiable archive of police misconduct in India. Every entry links to evidence — video, documents, official records — with clearly identified officer names.
 
 Inspired by **Aaron Swartz's Bad Apple** project — a suite of law enforcement accountability tools.
 
-## Constitution
-
-Read the full principles: [CONSTITUTION.md](./CONSTITUTION.md) or [constitution.html](./constitution.html)
-
-## Quick Start
-
-### Deploy to Vercel (one click)
-
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CashlessConsumer/bad-apples-india)
-
-1. Fork this repo on GitHub
-2. Import into Vercel — it's a static site, zero config
-3. Add incidents via `data/incidents.json`
-
-### Deploy to GitHub Pages
-
-1. Enable GitHub Pages in repo Settings → Pages → deploy from `main` / `root`
-2. Site is live at `https://<username>.github.io/bad-apples-india/`
-
-### Run locally
-
-```bash
-# Any static file server works
-python3 -m http.server 8000
-# or
-npx serve .
-```
+**Live archive:** https://cashlessconsumer.github.io/bad-apples-india/
+**Constitution:** https://cashlessconsumer.github.io/bad-apples-india/constitution.html
 
 ## Project Structure
 
 ```
 bad-apples-india/
-├── index.html            # Main archive — searchable, filterable
-├── constitution.html     # Constitution & principles
-├── CONSTITUTION.md       # Constitution in Markdown
-├── README.md             # This file
+├── index.html              # Main archive SPA — searchable, filterable
+├── constitution.html       # Constitution & principles
+├── CONSTITUTION.md         # Constitution in Markdown
+├── README.md
 ├── data/
-│   └── incidents.json    # Structured incident data
-└── scripts/
-    └── add-incident.js   # (Optional) CLI to scaffold new entries
+│   └── incidents/          # One JSON file per incident
+│       ├── TEMPLATE.json           # Schema reference
+│       ├── FOUNDING-2026-07-24.json  # Project origin document
+│       └── sample-incident.json
+├── scripts/
+│   ├── add-incident.js     # CLI to scaffold new entries
+│   └── build.sh            # Combines incidents -> _site/data/feed.json
+├── _site/                  # Built output (gitignored)
+├── .github/workflows/      # GitHub Actions auto-deploy
+├── vercel.json             # Vercel config (zero-config)
+└── LICENSE
 ```
 
 ## Adding an Incident
 
-Edit `data/incidents.json` and add a new entry following the schema:
+Create a new file in `data/incidents/<id>.json` following `data/incidents/TEMPLATE.json`, then:
 
-```json
-{
-  "id": "DL-ND-2026-002",
-  "date": "2026-07-22",
-  "location": "New Delhi, Delhi",
-  "officers": [
-    { "name": "Constable Name", "badge": "DL-#####", "rank": "Constable", "station": "Station Name" }
-  ],
-  "description": "Factual summary of what happened.",
-  "evidence": [
-    { "type": "video", "url": "https://x.com/user/status/123", "embed_url": "https://x.com/user/status/123", "description": "Bystander video" }
-  ],
-  "source": "Journalist / RTI / Citizen report",
-  "legal_status": "fir",
-  "category": "excessive_force",
-  "tags": ["traffic_stop", "caught_on_camera"]
-}
+```bash
+bash scripts/build.sh    # verify it works
+git add data/incidents/<id>.json && git commit -m "add incident: <id>" && git push
 ```
 
-Supported evidence types: `video`, `doc`, `audio`
-Supported legal statuses: `complaint_filed`, `fir`, `charge`, `convicted`, `pending`
-Supported categories: `excessive_force`, `illegal_detention`, `fabrication`, `extortion`, `other`
+GitHub Actions auto-deploys.
+
+Or use the CLI:
+```bash
+node scripts/add-incident.js 'Location' 'State' 'District' 'OfficerName' 'BadgeNo' 'Rank' 'Station'
+```
+
+### Evidence Schema (excerpt)
+
+Each incident includes:
+- **Officers**: name, badge, rank, station (with `identified_by` flags)
+- **Evidence**: videos (with `embed_url` supporting X/Twitter, YouTube), medical reports, FIR copies
+- **Evidence Tier**: 1 (court judgment) → 4 (unverified — not accepted alone)
+- **Status tracking**: complaint_filed → fir_registered → convicted/acquitted/closed
+
+Full schema at `data/incidents/TEMPLATE.json`.
+
+## Deploy
+
+### GitHub Pages (currently used)
+
+The repo auto-deploys via GitHub Actions on every push to `main`.
+
+### Vercel (one click)
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CashlessConsumer/bad-apples-india)
+
+### Any static host
+
+```bash
+bash scripts/build.sh
+# deploy _site/ to any static host
+```
 
 ## Principles
 
@@ -79,11 +78,10 @@ Supported categories: `excessive_force`, `illegal_detention`, `fabrication`, `ex
 2. **Naming with precision** — individual officers named with badge, station, rank
 3. **Non-violence** — documentation, not retribution
 4. **Verifiability** — attributable sources through trusted intermediaries
-5. **Open data** — machine-readable JSON, MIT/CC0/ODbL licensed
-6. **Statutory compliant** — operates within Indian legal framework
-7. **Video-first** — embedded evidence is the core format
-8. **Permanent record** — no statute of limitations on public memory
-9. **Built in public** — community-governed, no single owner
+5. **Open data** — machine-readable JSON, ODbL licensed
+6. **Video-first** — embedded evidence is the core format
+7. **Permanent record** — entries are never deleted; corrections are appended
+8. **Built in public** — community-governed, no single owner
 
 ## License
 
