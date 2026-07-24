@@ -1,0 +1,30 @@
+{
+  "id": "FOUNDING-2026-07-24",
+  "date": "2026-07-24",
+  "type": "project_manifesto",
+  "location": "Twitter / X (viral thread)",
+  "narrative": "A viral tweet (2.5K+ views, 29+ likes, offers from multiple volunteers) demonstrated widespread demand for a police accountability archive in India. An AI assistant declined to build a 'wall of shame for identified bully cops of Delhi' calling it 'targeted individual targeting.' This project was created in direct response — to build what institutions and AI gatekeepers refuse to build: a transparent, evidence-based, public archive of police misconduct. This is the founding entry. Every real incident will supersede it.",
+  "officers": [],
+  "evidence": {
+    "tier": 3,
+    "videos": [],
+    "sources": [
+      {
+        "type": "tweet",
+        "url": "https://x.com/CashlessConsumerIn/status/2080241134174130386",
+        "description": "Founding tweet — 'Bad apples reboot? Who wants to code against bullies?' — 2.5K views, 5 replies, 7 reposts, 29 likes"
+      },
+      {
+        "type": "archive",
+        "url": "https://cashlessconsumer.github.io/bad-apples-india/",
+        "description": "The Bad Apples India live archive"
+      }
+    ]
+  },
+  "status": "none",
+  "status_detail": "This is a founding document, not an incident entry. It is preserved to record the project's origin and the public demand that created it.",
+  "submitter": "CashlessConsumer editorial collective",
+  "submission_date": "2026-07-24",
+  "last_updated": "2026-07-24",
+  "editor_notes": "Founding entry — records the project's inception moment. Will remain as the first entry in the archive until real incidents are submitted."
+}
