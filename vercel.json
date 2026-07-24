@@ -1,21 +1,7 @@
 {
   "name": "bad-apples-india",
-  "version": 2,
-  "builds": [
-    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "_site" } }
-  ],
-  "routes": [
-    { "src": "/constitution/?", "dest": "/constitution.html" },
-    { "src": "/(.*)", "dest": "/$1" }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
-      ]
-    }
-  ]
+  "buildCommand": "./scripts/build.sh",
+  "outputDirectory": "_site",
+  "cleanUrls": true,
+  "trailingSlash": false
 }
