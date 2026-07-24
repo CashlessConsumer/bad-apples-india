@@ -1,0 +1,49 @@
+{
+  "id": "UK-UNNAMED-CONSTABLE-2026-07-20",
+  "date": "2026-07-20",
+  "location": "Kumaon Range (viral video incident)",
+  "state": "Uttarakhand",
+  "district": "Kumaon",
+  "narrative": "A constable posted in the Kumaon range was filmed in a viral video displaying aggressive behavior while in uniform. IG Kumaon Range Nivedita Kukreti confirmed the constable had already been suspended on July 20, 2026 for unauthorized absence since June 28, and had a criminal history with departmental proceedings already underway. Legal action was initiated over the statements made in the viral video. The officer's name was not publicly released by police but was known to investigators.",
+  "status": "departmental_action",
+  "status_detail": "Suspended on July 20 for unauthorized absence. Departmental proceedings ongoing. Legal action initiated over viral video statements.",
+  "officers": [
+    {
+      "name": "Unnamed Constable (Kumaon Range)",
+      "badge": "",
+      "rank": "Constable",
+      "station": "Kumaon Range, Uttarakhand Police",
+      "identified_by": ["internal_police_record"]
+    }
+  ],
+  "evidence": {
+    "tier": 2,
+    "videos": [
+      {
+        "source": "X (Twitter) — shared widely",
+        "url": "https://x.com/contentkikamii/status/2080621132320067963",
+        "embed_url": "https://x.com/contentkikamii/status/2080621132320067963",
+        "verified_independent": true
+      }
+    ],
+    "other_sources": [
+      "https://x.com/HemanNamo/status/2080635837524635681"
+    ]
+  },
+  "sources": [
+    {
+      "type": "x_post",
+      "url": "https://x.com/contentkikamii/status/2080621132320067963",
+      "description": "IG Kumaon Range Nivedita Kukreti confirms suspension and departmental proceedings"
+    },
+    {
+      "type": "x_post",
+      "url": "https://x.com/HemanNamo/status/2080635837524635681",
+      "description": "Context: officer was already suspended with prior criminal case"
+    }
+  ],
+  "submitter": "Bad Apples India editorial collective",
+  "submission_date": "2026-07-24",
+  "last_updated": "2026-07-24",
+  "editor_notes": "Officer name withheld by police. Confirmed suspension, criminal history, and ongoing departmental action from official police statement by IG Nivedita Kukreti."
+}

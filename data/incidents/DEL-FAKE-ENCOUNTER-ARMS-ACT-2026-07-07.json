@@ -1,0 +1,53 @@
+{
+  "id": "DEL-FAKE-ENCOUNTER-ARMS-ACT-2026-07-07",
+  "date": "2026-07-07",
+  "location": "Delhi",
+  "district": "Central Delhi",
+  "state": "Delhi",
+  "jurisdiction": "Delhi Police",
+  "station": "Unknown (Shahdara area)",
+  "narrative": "A city court in Delhi ordered an independent probe into the claim of a fake encounter. The petitioner, a man accused in an Arms Act case, alleged that Delhi Police officers illegally detained him, assaulted him, and then staged a fake encounter in which he was shot in the leg. The court found the allegations credible enough to warrant an independent investigation. The case was reported by Hindustan Times and highlighted the continuing problem of staged encounters in Delhi.",
+  "status": "investigation_ongoing",
+  "status_detail": "Court ordered independent probe into alleged fake encounter. Delhi Police officers implicated. Investigation ongoing.",
+  "officers": [
+    {
+      "name": "Unidentified Delhi Police officers",
+      "badge": "",
+      "rank": "Unknown",
+      "station": "Shahdara District",
+      "identified_by": []
+    }
+  ],
+  "victim": {
+    "name": "Name withheld (petitioner in Arms Act case)",
+    "age": null,
+    "gender": "male"
+  },
+  "evidence": {
+    "tier": 3,
+    "videos": [],
+    "medical_report": true,
+    "fir_copy": false,
+    "sources": [
+      {
+        "type": "news",
+        "url": "https://www.hindustantimes.com/cities/delhi-news/court-orders-probe-into-fake-encounter-allegation-101783362098663.html",
+        "description": "Hindustan Times — Court orders probe into fake encounter allegation"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "news",
+      "url": "https://www.hindustantimes.com/cities/delhi-news/court-orders-probe-into-fake-encounter-allegation-101783362098663.html",
+      "description": "Hindustan Times — Court orders independent probe into alleged fake encounter"
+    }
+  ],
+  "legal_status": "investigation_ongoing",
+  "category": "fake_encounter",
+  "tags": ["fake-encounter", "court-ordered-probe", "delhi"],
+  "submitter": "CashlessConsumer editorial collective",
+  "submission_date": "2026-07-25",
+  "last_updated": "2026-07-25",
+  "editor_notes": "Court-ordered independent probe. Officer names not yet identified in public record. Will update as investigation proceeds."
+}

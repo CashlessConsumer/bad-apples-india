@@ -1,0 +1,53 @@
+{
+  "id": "BIH-PATNA-SHO-KAMAL-2026-07-15",
+  "date": "2026-07-15",
+  "location": "Murar Police Station, Patna",
+  "district": "Patna",
+  "state": "Bihar",
+  "jurisdiction": "Bihar Police",
+  "station": "Murar PS",
+  "narrative": "The Patna High Court ordered registration of an FIR against SHO Kamal Nayan Pandey of Murar Police Station for allegedly abusing a man in casteist terms and brutally beating him with a baton, resulting in fractures to both legs. Justice Jitendra Kumar allowed the writ petition by Manish Kumar, stating unchecked police excesses threaten the rule of law and constitutional protections. The court warned that such unchecked police brutality could make police like 'Nazi Germany'.",
+  "status": "fir_registered",
+  "status_detail": "Patna High Court ordered FIR registration against SHO Kamal Nayan Pandey. Justice Jitendra Kumar observed that unchecked police excesses threaten constitutional protections.",
+  "officers": [
+    {
+      "name": "Kamal Nayan Pandey",
+      "badge": "",
+      "rank": "SHO",
+      "station": "Murar PS",
+      "identified_by": ["name", "rank", "station"]
+    }
+  ],
+  "victim": {
+    "name": "Manish Kumar (petitioner)",
+    "age": null,
+    "gender": "male"
+  },
+  "evidence": {
+    "tier": 2,
+    "videos": [],
+    "medical_report": true,
+    "fir_copy": false,
+    "sources": [
+      {
+        "type": "news",
+        "url": "https://timesofindia.indiatimes.com/legal/news/patna-high-court-orders-fir-against-sho-accused-of-breaking-mans-legs-says-unchecked-police-brutality-could-make-police-like-nazi-germany/articleshow/132519573.cms",
+        "description": "Times of India — Patna High Court orders FIR against SHO"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "news",
+      "url": "https://timesofindia.indiatimes.com/legal/news/patna-high-court-orders-fir-against-sho-accused-of-breaking-mans-legs-says-unchecked-police-brutality-could-make-police-like-nazi-germany/articleshow/132519573.cms",
+      "description": "Court ordered FIR against SHO Kamal Nayan Pandey for breaking man's legs"
+    }
+  ],
+  "legal_status": "fir_registered",
+  "category": "excessive_force",
+  "tags": ["casteist-abuse", "excessive-force", "court-ordered-fir", "bihar"],
+  "submitter": "CashlessConsumer editorial collective",
+  "submission_date": "2026-07-25",
+  "last_updated": "2026-07-25",
+  "editor_notes": "Court order from Patna HC. Officer identified, FIR ordered but registration status pending confirmation."
+}

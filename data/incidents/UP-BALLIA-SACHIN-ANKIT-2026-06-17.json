@@ -1,0 +1,67 @@
+{
+  "id": "UP-BALLIA-SACHIN-ANKIT-2026-06-17",
+  "date": "2026-06-17",
+  "location": "Gaighat, Ballia",
+  "district": "Ballia",
+  "state": "Uttar Pradesh",
+  "jurisdiction": "Uttar Pradesh Police",
+  "station": "Revati PS",
+  "narrative": "Kamji Gond (42) died in custody after being allegedly assaulted by police at Revati police station. An FIR was filed by his son Vishal Gond against sub-inspector Sachin Saroj, constable Ankit Singh, and others under BNS provisions related to murder. The victim was reportedly taken from his home while asleep, assaulted inside the police station under pressure from a village head, further assaulted at a brick kiln, and abandoned in an orchard. SI Sachin Saroj and Constable Ankit Singh were suspended. SHO Raj Keshar Singh was transferred to police lines. A magisterial inquiry was ordered.",
+  "status": "departmental_action",
+  "status_detail": "SI Sachin Saroj and constable Ankit Singh suspended. SHO Raj Keshar Singh transferred. Magisterial inquiry ordered by district administration.",
+  "officers": [
+    {
+      "name": "Sachin Saroj",
+      "badge": "",
+      "rank": "Sub-Inspector",
+      "station": "Revati PS",
+      "identified_by": ["name", "rank"]
+    },
+    {
+      "name": "Ankit Singh",
+      "badge": "",
+      "rank": "Constable",
+      "station": "Revati PS",
+      "identified_by": ["name", "rank"]
+    },
+    {
+      "name": "Raj Keshar Singh",
+      "badge": "",
+      "rank": "SHO",
+      "station": "Revati PS",
+      "identified_by": ["rank", "station"]
+    }
+  ],
+  "victim": {
+    "name": "Kamji Gond",
+    "age": 42,
+    "gender": "male"
+  },
+  "evidence": {
+    "tier": 2,
+    "videos": [],
+    "medical_report": true,
+    "fir_copy": true,
+    "sources": [
+      {
+        "type": "news",
+        "url": "https://www.thehindu.com/news/national/uttar-pradesh/magisterial-probe-ordered-into-ballia-custodial-death-allegation-sp-team-to-visit-village/article71228873.ece",
+        "description": "The Hindu — Magisterial probe ordered into Ballia custodial death"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "news",
+      "url": "https://www.thehindu.com/news/national/uttar-pradesh/magisterial-probe-ordered-into-ballia-custodial-death-allegation-sp-team-to-visit-village/article71228873.ece",
+      "description": "The Hindu — Custodial death of Kamji Gond, officers suspended"
+    }
+  ],
+  "legal_status": "departmental_action",
+  "category": "custodial_death",
+  "tags": ["custodial-death", "suspended", "magisterial-inquiry", "uttar-pradesh"],
+  "submitter": "CashlessConsumer editorial collective",
+  "submission_date": "2026-07-25",
+  "last_updated": "2026-07-25",
+  "editor_notes": "Magisterial inquiry ongoing. FIR filed by victim's son Vishal Gond."
+}

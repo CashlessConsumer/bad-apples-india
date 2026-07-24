@@ -1,0 +1,59 @@
+{
+  "id": "PUN-BARNALA-DSP-SATBIR-2025-12-10",
+  "date": "2025-12-10",
+  "location": "Barnala",
+  "district": "Barnala",
+  "state": "Punjab",
+  "jurisdiction": "Punjab Police",
+  "station": "Barnala",
+  "narrative": "DSP Satbir Singh was suspended after allegations of a brutal lathi charge on sanitation workers, including women, in Barnala city. The suspension was ordered under Rule 4(1)(a) of the Punjab Civil Services (Punishment and Appeal) Rules, 1970, following a Patiala Range DIG-led inquiry. His headquarters during suspension was set at the 4th Commando Battalion, SAS Nagar. Sanitation workers and political leaders demanded strict action, including an FIR under the SC/ST (Prevention of Atrocities) Act. Protests spread across Punjab following the incident.",
+  "status": "departmental_action",
+  "status_detail": "DSP Satbir Singh suspended under Punjab Police rules. Prima facie findings from video-based report. Final fact-finding report pending.",
+  "officers": [
+    {
+      "name": "Satbir Singh",
+      "badge": "",
+      "rank": "DSP",
+      "station": "Barnala",
+      "identified_by": ["name", "rank"]
+    }
+  ],
+  "victim": null,
+  "evidence": {
+    "tier": 2,
+    "videos": [],
+    "medical_report": true,
+    "fir_copy": false,
+    "sources": [
+      {
+        "type": "news",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/barnala-dsp-satbir-singh-suspended-over-lathi-charge-on-sanitation-workers-including-women/articleshow/132607948.cms",
+        "description": "Times of India — DSP Satbir Singh suspended for lathi charge"
+      },
+      {
+        "type": "news",
+        "url": "https://www.tribuneindia.com/news/bathinda/barnala-dsp-suspended-over-alleged-lathicharge-on-sanitation-workers-protests-spread-across-punjab/",
+        "description": "The Tribune — DSP suspended, protests spread across Punjab"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "news",
+      "url": "https://timesofindia.indiatimes.com/city/chandigarh/barnala-dsp-satbir-singh-suspended-over-lathi-charge-on-sanitation-workers-including-women/articleshow/132607948.cms",
+      "description": "DSP Satbir Singh suspended — Times of India"
+    },
+    {
+      "type": "news",
+      "url": "https://www.tribuneindia.com/news/bathinda/barnala-dsp-suspended-over-alleged-lathicharge-on-sanitation-workers-protests-spread-across-punjab/",
+      "description": "Protests spread after DSP lathicharge — The Tribune"
+    }
+  ],
+  "legal_status": "departmental_action",
+  "category": "excessive_force",
+  "tags": ["lathi-charge", "sanitation-workers", "suspended", "protest", "punjab"],
+  "submitter": "CashlessConsumer editorial collective",
+  "submission_date": "2026-07-25",
+  "last_updated": "2026-07-25",
+  "editor_notes": "DSP-level officer suspended. SC/ST Act demanded by protestors. Final report pending."
+}

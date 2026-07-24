@@ -1,0 +1,42 @@
+{
+  "id": "UP-HC-VIKRANT-APOLOGY-2026-07-23",
+  "date": "2026-07-23",
+  "location": "Kanpur / Uttar Pradesh (viral video)",
+  "state": "Uttar Pradesh",
+  "district": "Kanpur",
+  "narrative": "A viral video showed Head Constable (HC) Vikrant in an aggressive confrontation during a police interaction. Following widespread circulation of the video on social media, HC Vikrant publicly admitted his guilt and apologized for his actions. The video sparked significant public outrage and demands for departmental action.",
+  "status": "departmental_action",
+  "status_detail": "HC Vikrant admitted guilt and issued a public apology as video went viral. Departmental proceedings expected.",
+  "officers": [
+    {
+      "name": "Vikrant (HC)",
+      "badge": "",
+      "rank": "Head Constable",
+      "station": "Uttar Pradesh Police (exact station unconfirmed)",
+      "identified_by": ["name", "rank"]
+    }
+  ],
+  "evidence": {
+    "tier": 2,
+    "videos": [
+      {
+        "source": "X (Twitter)",
+        "url": "https://x.com/RahulSeeker/status/2080434786183823702",
+        "embed_url": "https://x.com/RahulSeeker/status/2080434786183823702",
+        "capture_time": "2026-07-23",
+        "verified_independent": false
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "x_post",
+      "url": "https://x.com/RahulSeeker/status/2080434786183823702",
+      "description": "Viral video — HC Vikrant admits guilt and apologizes"
+    }
+  ],
+  "submitter": "Bad Apples India editorial collective",
+  "submission_date": "2026-07-24",
+  "last_updated": "2026-07-24",
+  "editor_notes": "HC Vikrant's public admission of guilt and apology. Full departmental action status pending confirmation."
+}

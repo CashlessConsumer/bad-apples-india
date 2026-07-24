@@ -1,0 +1,49 @@
+{
+  "id": "CHD-MOHALI-ASI-DALJIT-2025-12-01",
+  "date": "2025-12-01",
+  "location": "Chandigarh/Mohali",
+  "district": "Chandigarh",
+  "state": "Chandigarh",
+  "jurisdiction": "Chandigarh Police",
+  "station": "Chandigarh",
+  "narrative": "The Punjab/Chandigarh Police Complaints Authority (PCA) found that suspended Assistant Sub-Inspector Daljit Singh engaged in grave misconduct for driving a Brezza car under the influence of liquor and causing multiple accidents. The PCA directed the UT Police to register an FIR against him under Bharatiya Nyaya Sanhita sections 125 (endangering life or safety) and 281 (rash driving). The directive came from a PCA bench comprising retired Justice Kuldip Singh, based on December 2025 press reports.",
+  "status": "fir_registered",
+  "status_detail": "PCA found 'grave misconduct'. Directed FIR under BNS sections 125 and 281. Investigation by officer above ASI rank ordered.",
+  "officers": [
+    {
+      "name": "Daljit Singh",
+      "badge": "",
+      "rank": "ASI (Suspended)",
+      "station": "Chandigarh Police",
+      "identified_by": ["name", "rank"]
+    }
+  ],
+  "victim": null,
+  "evidence": {
+    "tier": 2,
+    "videos": [],
+    "medical_report": false,
+    "fir_copy": false,
+    "sources": [
+      {
+        "type": "news",
+        "url": "https://indianexpress.com/article/cities/chandigarh/pca-chandigarh-fir-asi-daljit-singh-drunk-driving-misconduct-10688534/",
+        "description": "Indian Express — PCA finds grave misconduct by ASI Daljit Singh, orders FIR"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "news",
+      "url": "https://indianexpress.com/article/cities/chandigarh/pca-chandigarh-fir-asi-daljit-singh-drunk-driving-misconduct-10688534/",
+      "description": "PC ordered FIR against ASI Daljit Singh for drunk driving — Indian Express"
+    }
+  ],
+  "legal_status": "fir_registered",
+  "category": "misconduct",
+  "tags": ["drunk-driving", "police-complaints-authority", "fir-ordered", "chandigarh"],
+  "submitter": "CashlessConsumer editorial collective",
+  "submission_date": "2026-07-25",
+  "last_updated": "2026-07-25",
+  "editor_notes": "PCA took suo motu cognizance based on press reports. FIR directed but pending confirmation."
+}

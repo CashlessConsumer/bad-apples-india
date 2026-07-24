@@ -1,0 +1,53 @@
+{
+  "id": "BIH-BHOJPUR-FAKE-ENCOUNTER-2026-06-17",
+  "date": "2026-06-17",
+  "location": "Bilauti, Bhojpur",
+  "district": "Bhojpur",
+  "state": "Bihar",
+  "jurisdiction": "Bihar Police",
+  "station": "Bhojpur",
+  "narrative": "Bharat Bhushan Tiwari was killed in an alleged fake encounter in Bilauti village, Bhojpur district, sparking political and public outrage. The Bihar government formed a judicial commission led by retired Patna High Court judge Justice Vinod Kumar Sinha to probe the incident. Several policemen were suspended and FIRs registered. The commission met the victim's family, recorded statements, and inspected the crime site. The incident drew comparisons to extrajudicial killings and raised serious concerns about police accountability in Bihar.",
+  "status": "investigation_ongoing",
+  "status_detail": "Judicial commission formed by Bihar government. Retired HC judge Justice Vinod Kumar Sinha leading the probe. Suspensions and FIRs against several policemen.",
+  "officers": [
+    {
+      "name": "Multiple policemen (names pending investigation)",
+      "badge": "",
+      "rank": "Unknown",
+      "station": "Bhojpur",
+      "identified_by": []
+    }
+  ],
+  "victim": {
+    "name": "Bharat Bhushan Tiwari",
+    "age": null,
+    "gender": "male"
+  },
+  "evidence": {
+    "tier": 2,
+    "videos": [],
+    "medical_report": true,
+    "fir_copy": true,
+    "sources": [
+      {
+        "type": "news",
+        "url": "https://www.thehindu.com/news/national/bihar/bihar-fake-encounter-case-justice-vinod-kumar-sinha-meets-the-victims-family-inspects-site/article71146383.ece",
+        "description": "The Hindu — Judicial commission probes Bihar fake encounter"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "news",
+      "url": "https://www.thehindu.com/news/national/bihar/bihar-fake-encounter-case-justice-vinod-kumar-sinha-meets-the-victims-family-inspects-site/article71146383.ece",
+      "description": "The Hindu — Judicial commission formed to probe alleged fake encounter in Bihar"
+    }
+  ],
+  "legal_status": "investigation_ongoing",
+  "category": "fake_encounter",
+  "tags": ["fake-encounter", "judicial-commission", "suspended", "bihar"],
+  "submitter": "CashlessConsumer editorial collective",
+  "submission_date": "2026-07-25",
+  "last_updated": "2026-07-25",
+  "editor_notes": "Officer names to be updated as the judicial commission's investigation proceeds."
+}

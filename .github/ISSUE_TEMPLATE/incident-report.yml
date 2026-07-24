@@ -1,0 +1,119 @@
+name: 🍎 Report Police Misconduct Incident
+description: Submit evidence of a police misconduct incident in India for the Bad Apples archive.
+title: "[Incident] Location — Officer Name — Date"
+labels: ["incident-report", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Important
+        - All submissions are reviewed before publication
+        - You must provide verifiable evidence
+        - False reports will be permanently recorded as such
+        - Officer names must be publicly identified (not doxxed)
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: City, district, state where the incident occurred
+      placeholder: "e.g., Kashmere Gate, North Delhi, Delhi"
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Date of Incident
+      placeholder: "e.g., 2026-07-15"
+    validations:
+      required: true
+
+  - type: input
+    id: police_station
+    attributes:
+      label: Police Station / Jurisdiction
+      placeholder: "e.g., Kashmere Gate Police Station"
+    validations:
+      required: false
+
+  - type: textarea
+    id: officers
+    attributes:
+      label: Officer(s) Involved
+      description: Full name, badge number (if known), rank, station
+      placeholder: |
+        - Name: Rajesh Kumar, Badge: 3421/DAP, Rank: Constable, Station: Kashmere Gate PS
+        - Name: ..., Badge: ..., Rank: ..., Station: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: narrative
+    attributes:
+      label: Incident Description
+      description: What happened, when, and where. Be factual and precise.
+      placeholder: "Describe the incident..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence_urls
+    attributes:
+      label: Evidence URLs
+      description: Links to video, news articles, court orders, FIR copies, or other evidence
+      placeholder: |
+        - https://x.com/... (video)
+        - https://timesofindia.com/... (news)
+        - https://...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: evidence_tier
+    attributes:
+      label: Evidence Tier
+      description: Best description of your strongest evidence
+      options:
+        - Tier 1 — Court judgment / official inquiry report
+        - Tier 2 — Verified video / FIR copy / medical report
+        - Tier 3 — News article / single source
+        - Tier 4 — Unverified / unsupported
+    validations:
+      required: true
+
+  - type: dropdown
+    id: legal_status
+    attributes:
+      label: Current Legal Status (if known)
+      options:
+        - No legal action known
+        - Complaint filed
+        - FIR registered
+        - Investigation ongoing
+        - Departmental action taken
+        - Trial ongoing
+        - Convicted
+        - Acquitted
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      placeholder: "Any other information that helps verify this report..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Submission Agreement
+      options:
+        - label: I confirm the information provided is accurate to the best of my knowledge
+          required: true
+        - label: I understand this report will be publicly archived
+          required: true
+        - label: I am not submitting a false or malicious report
+          required: true

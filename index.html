@@ -165,6 +165,33 @@ footer a:hover{color:#999}
   .video-thumb img{height:auto;aspect-ratio:16/9}
   .incident-header{flex-direction:column}
 }
+
+/* ── report form ── */
+#report-form h2{font-size:1.4rem;margin-bottom:0.5rem;color:#e4e0d8}
+#report-form .form-note{color:#777;font-size:0.85rem;margin-bottom:1.5rem}
+.form-group{margin-bottom:1rem}
+.form-group label{display:block;font-size:0.85rem;color:#aaa;margin-bottom:0.3rem;font-weight:500}
+.form-group input,.form-group textarea,.form-group select{width:100%;background:#13131a;border:1px solid #333;border-radius:6px;padding:0.6rem 0.9rem;color:#e4e0d8;font-size:0.85rem;transition:border-color 0.2s;font-family:inherit}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:#ff6b35}
+.form-group textarea{resize:vertical;min-height:80px}
+.form-group select{cursor:pointer}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:600px){.form-row{grid-template-columns:1fr}}
+.submit-btn{background:#ff6b35;color:#fff;border:none;border-radius:6px;padding:0.75rem 1.5rem;font-size:0.9rem;font-weight:600;cursor:pointer;transition:background 0.2s;display:inline-flex;align-items:center;gap:0.5rem}
+.submit-btn:hover{background:#e55a2b}
+.submit-btn:disabled{background:#555;cursor:not-allowed}
+.submit-btn .spinner{display:none;width:16px;height:16px;border:2px solid rgba(255,255,255,0.3);border-top-color:#fff;border-radius:50%;animation:spin 0.6s linear infinite}
+.submit-btn.loading .spinner{display:inline-block}
+.submit-btn.loading .btn-text{opacity:0.7}
+@keyframes spin{to{transform:rotate(360deg)}}
+.form-status{margin-top:1rem;padding:0.75rem 1rem;border-radius:6px;font-size:0.85rem;display:none}
+.form-status.success{display:block;background:#1a2a1a;border:1px solid #3a5a3a;color:#8c8}
+.form-status.error{display:block;background:#2a1a1a;border:1px solid #5a3a3a;color:#f66}
+.form-status a{color:#6af;text-decoration:underline}
+.form-divider{border:none;border-top:1px solid #222;margin:2rem 0}
+.form-alt{text-align:center;color:#777;font-size:0.85rem;margin-top:1rem}
+.form-alt a{color:#6af}
+.required-star{color:#ff6b35}
 </style>
 </head>
 <body>
@@ -178,7 +205,8 @@ footer a:hover{color:#999}
     <a href="/">Archive</a>
     <a href="constitution.html">Constitution</a>
     <a href="https://github.com/CashlessConsumer/bad-apples-india" target="_blank" rel="noopener">Source</a>
-    <a href="#submit" onclick="alert('Submit via GitHub: fork the repo, add an incident JSON to data/incidents/, and open a PR. Details in README.')">Submit Evidence</a>
+    <a href="#report-form">Report an Incident</a>
+    <a href="https://github.com/CashlessConsumer/bad-apples-india/issues/new?template=incident-report.yml" target="_blank" rel="noopener">GitHub Issue</a>
   </nav>
 </header>
 
@@ -230,7 +258,72 @@ footer a:hover{color:#999}
   </div>
 </div>
 
-<!-- ═══ FOOTER ═══ -->
+<!-- ═══ REPORT FORM ═══ -->
+<section id="report-form" class="report-section">
+  <a href="#report-form" style="text-decoration:none"><h2>📋 Report an Incident</h2></a>
+  <p class="desc">Submit a police misconduct incident for review. All submissions are reviewed by editors before publication. Fields marked * are required.</p>
+  <form id="incidentReportForm" onsubmit="return submitReport(event)">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="officerName">Officer Name *</label>
+        <input type="text" id="officerName" required placeholder="Full name of the officer">
+      </div>
+      <div class="form-group">
+        <label for="officerRank">Rank (if known)</label>
+        <input type="text" id="officerRank" placeholder="e.g. Constable, SI, DSP">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="location">Location *</label>
+        <input type="text" id="location" required placeholder="City, District, State">
+      </div>
+      <div class="form-group">
+        <label for="station">Police Station</label>
+        <input type="text" id="station" placeholder="e.g. Kashmere Gate PS">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="description">Description of Incident *</label>
+      <textarea id="description" required rows="4" placeholder="What happened? When? What was the outcome? Be factual and specific."></textarea>
+      <div class="hint">Include date/time, what you witnessed or know, and any FIR/complaint numbers if available.</div>
+    </div>
+    <div class="form-group">
+      <label for="evidenceUrl">Evidence URL(s)</label>
+      <input type="url" id="evidenceUrl" placeholder="Link to video, news article, tweet, or document">
+      <div class="hint">Publicly accessible URL showing the incident. X/Twitter posts, YouTube, or news articles preferred.</div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="submitterIdentity">Your identity</label>
+        <select id="submitterIdentity">
+          <option value="anonymous">Anonymous</option>
+          <option value="journalist">Journalist / Media</option>
+          <option value="researcher">Researcher / Activist</option>
+          <option value="victim">Victim / Family</option>
+          <option value="other">Other (named in GitHub Issue)</option>
+        </select>
+        <div class="hint">For now, submissions go through GitHub (requires account). Anonymous via email coming soon.</div>
+      </div>
+      <div class="form-group">
+        <label for="contactEmail">Contact email (optional)</label>
+        <input type="email" id="contactEmail" placeholder="For follow-up only — not published">
+      </div>
+    </div>
+    <button type="submit" class="form-submit" id="submitBtn">Submit via GitHub Issue</button>
+  </form>
+  <div id="formSuccess" class="form-success"></div>
+  <div id="formError" class="form-error"></div>
+  <div class="form-gh-link">
+    Prefer direct submission?
+    <a href="https://github.com/CashlessConsumer/bad-apples-india/issues/new" target="_blank" rel="noopener">
+      Open a GitHub Issue directly
+    </a>
+    — or read the
+    <a href="constitution.html" target="_blank">Constitution</a>
+    before submitting.
+  </div>
+</section><!-- ═══ FOOTER ═══ -->
 <footer>
   Inspired by <a href="https://www.aaronswartzday.org/bad-apple-announcement" target="_blank" rel="noopener">Aaron Swartz's Bad Apples</a>.
   Built for accountability — not harassment, not violence, not vengeance.<br>
@@ -418,6 +511,67 @@ function closeModal(){
 }
 
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal() });
+
+// ═══ REPORT FORM ═══
+function submitReport(event){
+  event.preventDefault();
+  const btn=document.getElementById('submitBtn');
+  const success=document.getElementById('formSuccess');
+  const error=document.getElementById('formError');
+  success.style.display='none';
+  error.style.display='none';
+
+  const officerName=document.getElementById('officerName').value.trim();
+  const officerRank=document.getElementById('officerRank').value.trim();
+  const location=document.getElementById('location').value.trim();
+  const station=document.getElementById('station').value.trim();
+  const description=document.getElementById('description').value.trim();
+  const evidenceUrl=document.getElementById('evidenceUrl').value.trim();
+  const identity=document.getElementById('submitterIdentity').value;
+  const email=document.getElementById('contactEmail').value.trim();
+
+  if(!officerName||!location||!description){
+    error.textContent='Officer name, location, and description are required.';
+    error.style.display='block';
+    return false;
+  }
+
+  // Build GitHub issue body
+  let body = `## Incident Report\n\n`;
+  body += `**Officer Name:** ${officerName}\n`;
+  if(officerRank) body += `**Rank:** ${officerRank}\n`;
+  body += `**Location:** ${location}\n`;
+  if(station) body += `**Station:** ${station}\n`;
+  body += `**Date:** (please specify)\n\n`;
+  body += `## Description\n${description}\n\n`;
+  if(evidenceUrl) body += `## Evidence\n${evidenceUrl}\n\n`;
+  body += `---\n_Submitted via bad-apples-india report form | Submitter: ${identity}${email ? ' | Contact: '+email : ''}_`;
+
+  // Redirect to GitHub new issue with template pre-filled
+  const title = encodeURIComponent(`Incident: ${officerName} — ${location}`);
+  const issueBody = encodeURIComponent(body);
+  const labels = encodeURIComponent('from-form,incident-report');
+  const url = `https://github.com/CashlessConsumer/bad-apples-india/issues/new?title=${title}&body=${issueBody}&labels=${labels}`;
+
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>Redirecting to GitHub…';
+
+  // Open GitHub in new tab and reset form
+  window.open(url, '_blank');
+
+  // Show success message
+  success.innerHTML = `✅ Report draft opened in GitHub. Complete and submit the issue to finish.` +
+    `<br><small>Your data was <strong>not</strong> sent to any server — it's pre-filled in the GitHub form on your screen.</small>`;
+  success.style.display = 'block';
+
+  // Reset
+  setTimeout(()=>{
+    btn.disabled = false;
+    btn.textContent = 'Submit via GitHub Issue';
+  }, 3000);
+
+  return false;
+}
 
 // ═══ INIT ═══
 loadData().then(render);
