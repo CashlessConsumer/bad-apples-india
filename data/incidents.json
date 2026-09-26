@@ -3,36 +3,165 @@
     "archive": "Bad Apples India — Police Accountability Archive",
     "constitution": "https://github.com/CashlessConsumer/bad-apples-india/blob/main/CONSTITUTION.md",
     "version": "0.1.0",
-    "last_updated": "2026-07-25",
-    "total_incidents": 8,
+    "last_updated": "2026-09-26",
+    "total_incidents": 9,
     "editorial_contact": "bad-apples@example.org"
   },
   "officers": {
     "index": {
-      "Kamal Nayan Pandey": {"name": "Kamal Nayan Pandey", "rank": "SHO", "stations": ["Murar Police Station"], "known_in_force": true, "incident_ids": ["BAI-2026-001"]},
-      "Pawan Sangle": {"name": "Pawan Sangle", "rank": "Constable (Driver)", "stations": ["Sion Police Station"], "known_in_force": true, "incident_ids": ["BAI-2026-002"]},
-      "Satbir Singh": {"name": "Satbir Singh", "rank": "DSP", "stations": ["Barnala Police Station"], "known_in_force": true, "incident_ids": ["BAI-2026-003"]},
-      "Sachin Saroj": {"name": "Sachin Saroj", "rank": "Sub-Inspector", "stations": ["Revati Police Station"], "known_in_force": true, "incident_ids": ["BAI-2026-004"]},
-      "Ankit Singh": {"name": "Ankit Singh", "rank": "Constable", "stations": ["Revati Police Station"], "known_in_force": true, "incident_ids": ["BAI-2026-004"]},
-      "Raj Keshar Singh": {"name": "Raj Keshar Singh", "rank": "SHO", "stations": ["Revati Police Station"], "known_in_force": true, "incident_ids": ["BAI-2026-004"]},
-      "Daljit Singh": {"name": "Daljit Singh", "rank": "ASI", "stations": ["Chandigarh"], "known_in_force": true, "incident_ids": ["BAI-2026-006"]},
-      "Brijesh Singh": {"name": "Brijesh Singh", "rank": "Constable", "stations": ["Kanpur Police"], "known_in_force": true, "incident_ids": ["BAI-2026-007"]}
+      "Kamal Nayan Pandey": {
+        "name": "Kamal Nayan Pandey",
+        "rank": "SHO",
+        "stations": [
+          "Murar Police Station"
+        ],
+        "known_in_force": true,
+        "incident_ids": [
+          "BAI-2026-001"
+        ]
+      },
+      "Pawan Sangle": {
+        "name": "Pawan Sangle",
+        "rank": "Constable (Driver)",
+        "stations": [
+          "Sion Police Station"
+        ],
+        "known_in_force": true,
+        "incident_ids": [
+          "BAI-2026-002"
+        ]
+      },
+      "Satbir Singh": {
+        "name": "Satbir Singh",
+        "rank": "DSP",
+        "stations": [
+          "Barnala Police Station"
+        ],
+        "known_in_force": true,
+        "incident_ids": [
+          "BAI-2026-003"
+        ]
+      },
+      "Sachin Saroj": {
+        "name": "Sachin Saroj",
+        "rank": "Sub-Inspector",
+        "stations": [
+          "Revati Police Station"
+        ],
+        "known_in_force": true,
+        "incident_ids": [
+          "BAI-2026-004"
+        ]
+      },
+      "Ankit Singh": {
+        "name": "Ankit Singh",
+        "rank": "Constable",
+        "stations": [
+          "Revati Police Station"
+        ],
+        "known_in_force": true,
+        "incident_ids": [
+          "BAI-2026-004"
+        ]
+      },
+      "Raj Keshar Singh": {
+        "name": "Raj Keshar Singh",
+        "rank": "SHO",
+        "stations": [
+          "Revati Police Station"
+        ],
+        "known_in_force": true,
+        "incident_ids": [
+          "BAI-2026-004"
+        ]
+      },
+      "Daljit Singh": {
+        "name": "Daljit Singh",
+        "rank": "ASI",
+        "stations": [
+          "Chandigarh"
+        ],
+        "known_in_force": true,
+        "incident_ids": [
+          "BAI-2026-006"
+        ]
+      },
+      "Brijesh Singh": {
+        "name": "Brijesh Singh",
+        "rank": "Constable",
+        "stations": [
+          "Kanpur Police"
+        ],
+        "known_in_force": true,
+        "incident_ids": [
+          "BAI-2026-007"
+        ]
+      }
     },
     "_description": "Keyed by normalized full name. Value: {name, badge, rank, stations: [], known_in_force: bool, incident_ids: []}"
   },
   "stations": {
     "index": {
-      "Murar Police Station": {"name": "Murar Police Station", "district": "Patna", "zone": "Bihar Police", "incident_ids": ["BAI-2026-001"]},
-      "Sion Police Station": {"name": "Sion Police Station", "district": "Mumbai", "zone": "Maharashtra Police", "incident_ids": ["BAI-2026-002"]},
-      "Barnala Police Station": {"name": "Barnala Police Station", "district": "Barnala", "zone": "Punjab Police", "incident_ids": ["BAI-2026-003"]},
-      "Revati Police Station": {"name": "Revati Police Station", "district": "Ballia", "zone": "Uttar Pradesh Police", "incident_ids": ["BAI-2026-004"]},
-      "Kanpur Police": {"name": "Kanpur Police", "district": "Kanpur", "zone": "Uttar Pradesh Police", "incident_ids": ["BAI-2026-007"]},
-      "Bhojpur Police": {"name": "Bhojpur Police", "district": "Bhojpur", "zone": "Bihar Police", "incident_ids": ["BAI-2026-008"]}
+      "Murar Police Station": {
+        "name": "Murar Police Station",
+        "district": "Patna",
+        "zone": "Bihar Police",
+        "incident_ids": [
+          "BAI-2026-001"
+        ]
+      },
+      "Sion Police Station": {
+        "name": "Sion Police Station",
+        "district": "Mumbai",
+        "zone": "Maharashtra Police",
+        "incident_ids": [
+          "BAI-2026-002"
+        ]
+      },
+      "Barnala Police Station": {
+        "name": "Barnala Police Station",
+        "district": "Barnala",
+        "zone": "Punjab Police",
+        "incident_ids": [
+          "BAI-2026-003"
+        ]
+      },
+      "Revati Police Station": {
+        "name": "Revati Police Station",
+        "district": "Ballia",
+        "zone": "Uttar Pradesh Police",
+        "incident_ids": [
+          "BAI-2026-004"
+        ]
+      },
+      "Kanpur Police": {
+        "name": "Kanpur Police",
+        "district": "Kanpur",
+        "zone": "Uttar Pradesh Police",
+        "incident_ids": [
+          "BAI-2026-007"
+        ]
+      },
+      "Bhojpur Police": {
+        "name": "Bhojpur Police",
+        "district": "Bhojpur",
+        "zone": "Bihar Police",
+        "incident_ids": [
+          "BAI-2026-008"
+        ]
+      }
     },
     "_description": "Keyed by station name. Value: {name, district, zone, coordinates, incident_ids: []}"
   },
   "incidents": [
-    "BAI-2026-001", "BAI-2026-002", "BAI-2026-003", "BAI-2026-004",
-    "BAI-2026-005", "BAI-2026-006", "BAI-2026-007", "BAI-2026-008"
+    "BAI-2026-001",
+    "BAI-2026-002",
+    "BAI-2026-003",
+    "BAI-2026-004",
+    "BAI-2026-005",
+    "BAI-2026-006",
+    "BAI-2026-007",
+    "BAI-2026-008",
+    "DEL-DU-STUDENTS-DETENTION-SURVEILLANCE-2026-03-12"
   ]
 }

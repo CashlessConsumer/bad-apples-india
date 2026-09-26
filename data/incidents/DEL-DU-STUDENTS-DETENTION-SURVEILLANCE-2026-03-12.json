@@ -1,0 +1,63 @@
+{
+  "id": "DEL-DU-STUDENTS-DETENTION-SURVEILLANCE-2026-03-12",
+  "date": "2026-03-12",
+  "location": "New Delhi (Dyal Singh College, Vijay Nagar; families in TN, Karnataka, Odisha)",
+  "district": "South Delhi",
+  "state": "Delhi",
+  "narrative": "On 12-13 March 2026, ten students and labour-rights activists — including Delhi University student Ilakkiya, labour activist Shiv Kumar, BSCEM members Abinash (21) and Akshay (24), and former BSCEM president Gurkirat — were allegedly picked up and detained without due process by Delhi Police personnel in plain clothes, identified by detainees as Special Cell. Pickups began outside Dyal Singh College, where Ilakkiya and Shiv Kumar had gone to meet a professor about a 31 March programme commemorating Bhagat Singh, Sukhdev and Rajguru (Anti-Imperialism Week, organised by the Forum Against Corporatisation and Militarisation), and continued at a Vijay Nagar room where friends had assembled. Detainees allege assault, denial of food to Ilakkiya on the first day, seizure of phones, a diary, Metro card and money without documentation, and being told to cancel the programme. Nine of the ten were released barely 12 hours before the Delhi High Court heard habeas corpus petitions in an unusual Sunday sitting (the tenth, Abinash, says he was released around 1 am on 15 March); the court directed preservation of CCTV footage of the pickup locations. In August 2026, those released and their families reported continuing harassment: repeated police visits every 7-10 days to Gurkirat's parents' home in Shivaji Enclave with notices in old cases, and home visits to families in Tamil Nadu, Karnataka and Odisha.",
+  "status": "investigation_ongoing",
+  "status_detail": "On 19 May 2026 Delhi Police told the Delhi High Court an inquiry has been initiated into the alleged illegal detention and torture; came after the court's rebuke. CCTV preservation order from March 2026 standing. Inquiry outcome pending as of 2026-09-26.",
+  "surveillance": {
+    "summary": "Post-release tracking and intimidation alleged: police personnel allegedly visiting families across states months after release, questioning parents, serving notices in old cases including defamation.",
+    "entries": [
+      {"date": "2026-03", "allegation": "During detention, Shiv Kumar alleges officers threatened to kill the detainees; he reported sleeplessness and nervousness after release.", "source": "indianexpress_2026-03"},
+      {"date": "2026-08", "allegation": "Gurkirat (ex-BSCEM president, now at Panjab University) alleges Delhi Police personnel visit her parents' Shivaji Enclave home every 7-10 days for several months, asking her whereabouts and serving notices in old cases including defamation cases.", "source": "thehindu_2026-08"},
+      {"date": "2026-08", "allegation": "Families of the students in Tamil Nadu, Karnataka and Odisha report repeated home visits, questioning of parents and relatives, and surveillance months to years after the March 2026 detentions.", "source": "thehindu_2026-08"}
+    ]
+  },
+  "officers": [
+    {
+      "name": "Unidentified Delhi Police personnel (identified by detainees as Special Cell) [unidentified]",
+      "badge": "",
+      "rank": "unverified",
+      "station": "Delhi Police Special Cell",
+      "identified_by": []
+    }
+  ],
+  "evidence": {
+    "tier": 3,
+    "videos": [],
+    "medical_report": false,
+    "documents": [
+      "Delhi High Court habeas corpus petitions (March 2026); HC direction to preserve CCTV footage of pickup locations",
+      "Delhi Police statement to Delhi HC of inquiry initiation (19 May 2026)"
+    ]
+  },
+  "sources": [
+    {
+      "type": "news_report",
+      "url": "https://indianexpress.com/article/cities/delhi/beaten-told-not-to-hold-program-on-bhagat-singh-allege-students-and-activists-picked-up-by-police-in-delhi-10591252/",
+      "description": "Indian Express, March 2026 — on-record interviews with Ilakkiya, Shiv Kumar, Abinash, Akshay; HC Sunday sitting; CCTV preservation order",
+      "cited_as": "indianexpress_2026-03"
+    },
+    {
+      "type": "court_reporting",
+      "url": "https://www.barandbench.com/news/after-delhi-high-court-rebuke-delhi-police-initiates-probe-into-detention-torture-of-student-activists",
+      "description": "Bar & Bench, 19 May 2026 — Delhi Police informs Delhi HC of inquiry into alleged illegal detention and torture",
+      "cited_as": "barandbench_2026-05-19"
+    },
+    {
+      "type": "news_report",
+      "url": "https://www.thehindu.com/news/cities/Delhi/delhi-students-allege-police-harassment-follows-them-to-their-homes-in-other-states-long-after-protests-are-over/article71324954.ece",
+      "description": "The Hindu, August 2026 — police harassment follows students home to Tamil Nadu, Karnataka, Odisha; Gurkirat on repeated home visits",
+      "cited_as": "thehindu_2026-08"
+    }
+  ],
+  "category": "illegal_detention_surveillance",
+  "tags": ["delhi-police", "special-cell", "students", "surveillance", "habeas-corpus", "bscem", "delhi-hc"],
+  "submitter": "BadApples persona (Zo desk), for the Bad Apples India editorial collective",
+  "submission_date": "2026-09-26",
+  "last_updated": "2026-09-26",
+  "editor_notes": "Constitution 2.3 applied: all accounts are allegations as reported by on-record named sources; no officer identity established yet (3.2 [unidentified] notation used). Track: (1) outcome of the police inquiry reported to HC on 19 May 2026, (2) CCTV preservation compliance, (3) any FIR or departmental action naming officers, (4) continued family-visit reports in TN/Karnataka/Odisha. Update this file as courts act; never delete (2.5).",
+  "verified": false
+}
