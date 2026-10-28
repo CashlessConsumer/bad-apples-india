@@ -3,8 +3,8 @@
     "archive": "Bad Apples India — Police Accountability Archive",
     "constitution": "https://github.com/CashlessConsumer/bad-apples-india/blob/main/CONSTITUTION.md",
     "version": "0.1.0",
-    "last_updated": "2026-09-26",
-    "total_incidents": 9,
+    "last_updated": "2026-10-28",
+    "total_incidents": 10,
     "editorial_contact": "bad-apples@example.org"
   },
   "officers": {
@@ -162,6 +162,7 @@
     "BAI-2026-006",
     "BAI-2026-007",
     "BAI-2026-008",
-    "DEL-DU-STUDENTS-DETENTION-SURVEILLANCE-2026-03-12"
+    "DEL-DU-STUDENTS-DETENTION-SURVEILLANCE-2026-03-12",
+    "TN-CHENNAI-ECONOMIST-KALAIYARASAN-DETENTION-2026-10-28"
   ]
 }

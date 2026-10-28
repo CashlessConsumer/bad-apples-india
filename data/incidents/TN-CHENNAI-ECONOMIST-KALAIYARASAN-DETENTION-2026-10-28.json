@@ -1,0 +1,73 @@
+{
+  "id": "TN-CHENNAI-ECONOMIST-KALAIYARASAN-DETENTION-2026-10-28",
+  "bai_id": "BAI-2026-010",
+  "date": "2026-10-28",
+  "location": "Chennai (residence pickup; released same morning)",
+  "district": "Chennai",
+  "state": "Tamil Nadu",
+  "narrative": "On the morning of 28 October 2026, plain-clothes Tamil Nadu police personnel allegedly picked up A. Kalaiyarasan, economist and Associate Professor at the Madras Institute of Development Studies (MIDS), Chennai, at around 5:00 AM, in connection with abusive content posted by a fake social-media account impersonating him; according to contemporaneous accounts he was released and dropped back home at around 7:45 AM the same morning without being formally arrested or charged. The episode came days after he appeared in a television interview discussing rising prices in Tamil Nadu. The same day, he sent a complaint letter to the Director-General of Police, Tamil Nadu, seeking intervention and a record of the episode. No officer, unit or police station has been identified; no FIR against any police personnel and no inquiry into the detention is known as of 28 October 2026.",
+  "status": "complaint_filed",
+  "status_detail": "Complaint letter to the DGP, Tamil Nadu, dated 28 October 2026, seeking intervention. Released without formal arrest or charge; no FIR against police personnel and no departmental or magisterial inquiry known as of 28 October 2026. Note: a separate FIR relating to the impersonation matter may exist against unknown persons; this entry tracks accountability for the detention itself.",
+  "officers": [
+    {
+      "name": "Unidentified Tamil Nadu Police personnel (plain clothes) [unidentified]",
+      "badge": "",
+      "rank": "unverified",
+      "station": "Unidentified Tamil Nadu police station",
+      "identified_by": []
+    }
+  ],
+  "evidence": {
+    "tier": 3,
+    "videos": [],
+    "medical_report": false,
+    "documents": [
+      "Complaint letter from Kalaiyarasan to the DGP, Tamil Nadu, dated 28 October 2026 (photograph of the letter circulated on X by @karur_kaaran; a repost carrying the letter was deleted by @pkr_madras to remove the victim's home address)"
+    ]
+  },
+  "sources": [
+    {
+      "type": "x_post",
+      "url": "https://x.com/pkr_madras/status/2115510643528962233",
+      "description": "Prabhakar Tamilarasu (@pkr_madras), journalist, RedInk Award 2021 — reports 5 AM pickup, 7:45 AM release without charge, TV-interview context, and the DGP complaint letter",
+      "cited_as": "pkr_madras_2026-10-28"
+    },
+    {
+      "type": "x_post",
+      "url": "https://x.com/karur_kaaran/status/2115490001446465965",
+      "description": "Krishna (@karur_kaaran) — publishes the photograph of the complaint letter to the DGP",
+      "cited_as": "karur_kaaran_2026-10-28"
+    },
+    {
+      "type": "x_post",
+      "url": "https://x.com/NityJayaraman/status/2115509304132579678",
+      "description": "Nityanand Jayaraman (@NityJayaraman), researcher and activist — independent account of the pickup the same morning",
+      "cited_as": "nityjayaraman_2026-10-28"
+    },
+    {
+      "type": "x_post",
+      "url": "https://x.com/shamianram/status/2115514718043636154",
+      "description": "Ramkumar Arumugasamy (@shamianram) — frames the allegation as concerning a comment by an impersonator account, not by Kalaiyarasan",
+      "cited_as": "shamianram_2026-10-28"
+    },
+    {
+      "type": "x_post",
+      "url": "https://x.com/VikkiZizou/status/2115507477337034941",
+      "description": "Vignesh (@VikkiZizou) — identifies Kalaiyarasan as MIDS Associate Professor and links the episode to his remarks on inflation and the TVK government",
+      "cited_as": "vikkizizou_2026-10-28"
+    }
+  ],
+  "category": "illegal_detention",
+  "tags": [
+    "tamil-nadu-police",
+    "chennai",
+    "illegal-detention",
+    "impersonation",
+    "dgp-complaint",
+    "academic"
+  ],
+  "submitter": "Bad Apples India editorial collective",
+  "submission_date": "2026-10-28",
+  "last_updated": "2026-10-28",
+  "editor_notes": "Tier 3 per Constitution Art. III: multiple independent accounts by named individuals, led by a RedInk-awardee journalist, plus the victim's own complaint letter (a primary document, self-published). No video, FIR, medical record or court order yet exists for the detention itself; tier should be revisited if any of those surface. Officers are wholly unidentified — recorded as plain-clothes personnel per Art. I 1.1 unit rule. CAUTION FOR FUTURE EDITORS: the Madras HC Madurai Bench order in Innisai v. State of Tamil Nadu, HCP(MD) No. 1359 of 2026 (23 October 2026, G.R. Swaminathan & P. Murugan JJ) concerns Inspector Sugumaran of District Crime Branch, Thanjavur, arrested in an extortion case — a DIFFERENT matter that surfaced in the same news cycle and was conflated with this case in at least one AI-generated summary post. Do not merge. Watch items: DGP office response, any FIR/inquiry into the detention, whether the State Police Complaints Authority route is invoked (note: under s.12 of the TN Police (Reform) Act 2013 the SPCA entertains only death in custody, rape, or grievous hurt in custody, so this detention falls outside its statutory mandate), and any repetition of the pattern."
+}
