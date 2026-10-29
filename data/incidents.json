@@ -118,6 +118,14 @@
           "BAI-2026-002"
         ]
       },
+      "T4 Sankar Nagar Police Station": {
+        "name": "T4 Sankar Nagar Police Station",
+        "district": "Chengalpattu",
+        "zone": "Tambaram City Police",
+        "incident_ids": [
+          "BAI-2026-010"
+        ]
+      },
       "Barnala Police Station": {
         "name": "Barnala Police Station",
         "district": "Barnala",

@@ -5,7 +5,7 @@
   "location": "Chennai (residence pickup; released same morning)",
   "district": "Chennai",
   "state": "Tamil Nadu",
-  "narrative": "On the morning of 28 October 2026, plain-clothes Tamil Nadu police personnel allegedly picked up A. Kalaiyarasan, economist and Associate Professor at the Madras Institute of Development Studies (MIDS), Chennai, at around 5:00 AM, in connection with abusive content posted by a fake social-media account impersonating him; according to contemporaneous accounts he was released and dropped back home at around 7:45 AM the same morning without being formally arrested or charged. The episode came days after he appeared in a television interview discussing rising prices in Tamil Nadu. The same day, he sent a complaint letter to the Director-General of Police, Tamil Nadu, seeking intervention and a record of the episode. No officer, unit or police station has been identified; no FIR against any police personnel and no inquiry into the detention is known as of 28 October 2026.",
+  "narrative": "On the morning of 28 October 2026, plain-clothes Tamil Nadu police personnel allegedly picked up A. Kalaiyarasan, economist and Associate Professor at the Madras Institute of Development Studies (MIDS), Chennai, at around 5:00 AM, in connection with abusive content posted by a fake Instagram account impersonating him; according to contemporaneous accounts he was released and dropped back home at around 7:45 AM the same morning without being formally arrested or charged. His complaint letter to the DGP names the stated destination as T4 Sankar Nagar Police Station, Pammal (a Tambaram City Police station), says he was driven in a rented car (not a police vehicle), and that the impersonation account @yourvijayamani used as its profile picture his photograph from the Harvard University website. The account was verified live on 2026-10-29 (2 followers; see data/evidence/2026-10-29-yourvijayamani-osint/OSINT-NOTE.md), with its profile picture matching his Harvard Mittal Institute portrait. The episode came days after he appeared in a television interview discussing rising prices in Tamil Nadu. The same day, he sent the complaint letter to the Director-General of Police, Tamil Nadu, seeking intervention and a record of the episode. No officer has been identified; no FIR against any police personnel and no inquiry into the detention is known as of 29 October 2026.",
   "status": "complaint_filed",
   "status_detail": "Complaint letter to the DGP, Tamil Nadu, dated 28 October 2026, seeking intervention. Released without formal arrest or charge; no FIR against police personnel and no departmental or magisterial inquiry known as of 28 October 2026. Note: a separate FIR relating to the impersonation matter may exist against unknown persons; this entry tracks accountability for the detention itself.",
   "officers": [
@@ -13,7 +13,7 @@
       "name": "Unidentified Tamil Nadu Police personnel (plain clothes) [unidentified]",
       "badge": "",
       "rank": "unverified",
-      "station": "Unidentified Tamil Nadu police station",
+      "station": "Stated destination per victim's letter: T4 Sankar Nagar Police Station, Pammal (Tambaram City Police Commissionerate) [unverified]; pickup at Adyar, Chennai (Greater Chennai Police area)",
       "identified_by": []
     }
   ],
@@ -22,7 +22,8 @@
     "videos": [],
     "medical_report": false,
     "documents": [
-      "Complaint letter from Kalaiyarasan to the DGP, Tamil Nadu, dated 28 October 2026 (photograph of the letter circulated on X by @karur_kaaran; a repost carrying the letter was deleted by @pkr_madras to remove the victim's home address)"
+      "Complaint letter from Kalaiyarasan to the DGP, Tamil Nadu, dated 28 October 2026 (photograph of the letter circulated on X by @karur_kaaran; a repost carrying the letter was deleted by @pkr_madras to remove the victim's home address; archived at data/evidence/2026-10-29-yourvijayamani-osint/dgp-complaint-letter-2026-10-28.jpg)",
+      "OSINT note and evidence pack on the impersonation account @yourvijayamani (verified live 2026-10-29; profile picture matches his Harvard Mittal Institute portrait): data/evidence/2026-10-29-yourvijayamani-osint/OSINT-NOTE.md"
     ]
   },
   "sources": [
@@ -63,11 +64,13 @@
     "chennai",
     "illegal-detention",
     "impersonation",
+    "impersonation-account-yourvijayamani",
+    "tambaram-city-police",
     "dgp-complaint",
     "academic"
   ],
   "submitter": "Bad Apples India editorial collective",
   "submission_date": "2026-10-28",
-  "last_updated": "2026-10-28",
-  "editor_notes": "Tier 3 per Constitution Art. III: multiple independent accounts by named individuals, led by a RedInk-awardee journalist, plus the victim's own complaint letter (a primary document, self-published). No video, FIR, medical record or court order yet exists for the detention itself; tier should be revisited if any of those surface. Officers are wholly unidentified — recorded as plain-clothes personnel per Art. I 1.1 unit rule. CAUTION FOR FUTURE EDITORS: the Madras HC Madurai Bench order in Innisai v. State of Tamil Nadu, HCP(MD) No. 1359 of 2026 (23 October 2026, G.R. Swaminathan & P. Murugan JJ) concerns Inspector Sugumaran of District Crime Branch, Thanjavur, arrested in an extortion case — a DIFFERENT matter that surfaced in the same news cycle and was conflated with this case in at least one AI-generated summary post. Do not merge. Watch items: DGP office response, any FIR/inquiry into the detention, whether the State Police Complaints Authority route is invoked (note: under s.12 of the TN Police (Reform) Act 2013 the SPCA entertains only death in custody, rape, or grievous hurt in custody, so this detention falls outside its statutory mandate), and any repetition of the pattern."
+      "last_updated": "2026-10-29",
+  "editor_notes": "Tier 3 per Constitution Art. III: multiple independent accounts by named individuals, led by a RedInk-awardee journalist, plus the victim's own complaint letter (a primary document, self-published). No video, FIR, medical record or court order yet exists for the detention itself; tier should be revisited if any of those surface. Officers are wholly unidentified — recorded as plain-clothes personnel per Art. I 1.1 unit rule. CAUTION FOR FUTURE EDITORS: the Madras HC Madurai Bench order in Innisai v. State of Tamil Nadu, HCP(MD) No. 1359 of 2026 (23 October 2026, G.R. Swaminathan & P. Murugan JJ) concerns Inspector Sugumaran of District Crime Branch, Thanjavur, arrested in an extortion case — a DIFFERENT matter that surfaced in the same news cycle and was conflated with this case in at least one AI-generated summary post. Do not merge. OSINT UPDATE 2026-10-29: impersonation account verified live as @yourvijayamani ('vijaya manikandan', bio 'Research analyst | cosmopolitan', 2 followers/35 following, still active after the incident); profile picture matches his Harvard Mittal Institute portrait exactly; account's own posts are repost memes (one Aug 2026 post captioned 'Elaathaium adipom' = 'we'll beat everyone'); Google-indexed comments 'Kanja college'/'Kanjaavum' on TVK-tagged posts corroborate an abusive-comment pattern (Tier 4 snippets). The specific comment about MLA Kamatchi rests on the victim's letter only. Operator identity unverifiable from public surface; per Art. II we do not attempt identification. Evidence pack: data/evidence/2026-10-29-yourvijayamani-osint/. Watch items: DGP office response, any FIR/inquiry into the detention, whether the State Police Complaints Authority route is invoked (note: under s.12 of the TN Police (Reform) Act 2013 the SPCA entertains only death in custody, rape, or grievous hurt in custody, so this detention falls outside its statutory mandate), and any repetition of the pattern."
 }

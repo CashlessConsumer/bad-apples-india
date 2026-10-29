@@ -2,3 +2,5 @@ _site/
 node_modules/
 .DS_Store
 *.log
+# Complaint letter carries the victim's home address — local evidence only (Art. II)
+data/evidence/**/dgp-complaint-letter-*.jpg
