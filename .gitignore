@@ -4,3 +4,7 @@ node_modules/
 *.log
 # Complaint letter carries the victim's home address — local evidence only (Art. II)
 data/evidence/**/dgp-complaint-letter-*.jpg
+
+# yourvijayamani watch runtime state (not evidence)
+data/evidence/2026-10-29-yourvijayamani-osint/watch-state/
+data/evidence/2026-10-29-yourvijayamani-osint/watch.log
